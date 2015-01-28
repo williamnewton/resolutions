@@ -227,7 +227,7 @@ p.pull-right {
 	font-size: 24px;
 	cursor:pointer;
 	position:absolute;
-	top:130px;
+	top:80px;
 	right:24px;
 	z-index: 1000;
 }
@@ -245,7 +245,7 @@ p.pull-right {
 	line-height:0.95em;
 	letter-spacing:-5px;
 	margin-top:0;
-	font-size:96px;
+	font-size:72px;
 	font-weight:800;
 }
 
@@ -512,8 +512,6 @@ input {
 	bottom:0;
 }
 
-.saved-message 
-
 h1.saved-message-content {
 	color: white;
 	font-size: 100px;
@@ -547,6 +545,36 @@ h1.saved-message-content {
 	}
 	.tutorial{
 	padding:0;	
+	}
+	.login-btn {
+		width:200px;
+		font-size:20px;
+		height:50px;
+		line-height:50px;
+		text-decoration: none;
+		border-radius:4px;
+		background:#4099ff;
+		padding:12px;
+		margin:50px auto;
+	}
+	.tutorial-content {
+		padding:0;
+	}
+	.tutorial-content h1 {
+		font-size:36px;
+		color:#333;
+		padding:12px;
+	}
+	.user {
+		display:none;
+	}
+	.save-btn {
+		display:block;
+		float:right;
+		margin-right: 12px;
+		position:relative;
+		top:0;
+		left:0;
 	}
 }
 
