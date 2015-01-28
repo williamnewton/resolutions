@@ -188,7 +188,6 @@ p.pull-right {
 
 .menu li a {
 	padding:6px;
-	line-height:;
 }
 
 .user:hover .menu{
@@ -431,6 +430,7 @@ input {
 	text-align:center;
 	color:#fff;
 }
+
 /*
 .tutorial {
 	position:absolute;
@@ -545,8 +545,8 @@ h1.saved-message-content {
 	.add-button {
 		opacity:1;
 	}
-	.tutorial {
-		display:none;
+	.tutorial{
+	padding:0;	
 	}
 }
 
