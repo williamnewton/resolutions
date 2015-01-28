@@ -505,7 +505,7 @@ input {
 	opacity:0;
 	background:black;
 	pointer-events:none;
-	z-index: 2000;
+	z-index: 5000;
 	transition:all 0.3s ease;
 	top:0;
 	left:0;
