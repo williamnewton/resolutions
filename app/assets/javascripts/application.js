@@ -71,6 +71,19 @@ $(document).ready(function () {
     };
 
     kaskade();
+    
+    var savedAnimation1 = function () {
+        $('.saved-message').addClass('show-saved');
+    }
+    var savedAnimation2 = function () {
+        $('.saved-message').removeClass('show-saved');
+    }
+
+     var savedAnimation = function () {
+        //setTimeout(animateIn1, 150);
+        setTimeout(savedAnimation1, 100);
+        setTimeout(savedAnimation2, 1200);
+    };    
 
     $('.save-btn').click(function(e) {
         e.preventDefault();
@@ -88,6 +101,8 @@ $(document).ready(function () {
             });
         };
 
+        savedAnimation();
+        
         console.log(data);
 
         var request = $.post(url, data);

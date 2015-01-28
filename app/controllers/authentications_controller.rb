@@ -2,6 +2,7 @@ class AuthenticationsController < ApplicationController
 	def twitter
 		binding.pry
 		create
+		
 	end
 
 	def create

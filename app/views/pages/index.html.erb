@@ -15,19 +15,27 @@
 			</div>
 		</div>
 	<% else %>
-		<a href="/logout">logout</a>
+	<div class="saved-message">
+		<h1 class="saved-message-content">SAVED!</h1>
+	</div>
+		<div class="user">
+			<img class="user-img" src="https://pbs.twimg.com/profile_images/378800000297360664/96d9e7224ec40be585466172a3785249_400x400.png" />
+			<p class="pull-right">your name here</p>
+			<ul class="menu">
+				<li>
+					<a class="logout-btn" href="/logout">logout</a>
+				</li>
+			</ul>
+		</div>
 	<% end %>
-
 	<div class="content-wrapper">
+		<button class="save-btn">SAVE</button>
 		<div class="row-line  pull-left">
 			<h1>2<span class="cap-squeeze">015</span></h1>
 			<h3><strong>On the first of every month:</strong><br />
 			reflect on the past month, and adjust goals if necessary</h3>
 			<h4>
 		</div>
-
-		
-		<button class="save-btn pull-right">SAVE</button>
 
 		<div class="row-line hidden">
 			<div class="indent-left" id="daily">
