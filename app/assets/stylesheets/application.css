@@ -372,6 +372,10 @@ input {
 	position:relative;
 }
 
+.new-row input {
+	margin-bottom:8px;
+}
+
 .remove {
 	font-family:Helvetica, Arial, sans-serif;
 	font-size:12px;

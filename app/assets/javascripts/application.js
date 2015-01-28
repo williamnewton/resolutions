@@ -45,19 +45,15 @@ $(document).ready(function () {
     var animateIn1 = function () {
         $($('.row-line')[0]).removeClass('hidden');
     }
-
     var animateIn2 = function () {
         $($('.row-line')[1]).removeClass('hidden');
     }
-
     var animateIn3 = function () {
         $($('.row-line')[2]).removeClass('hidden');
     }
-
     var animateIn4 = function () {
         $($('.row-line')[3]).removeClass('hidden');
     }
-
     var animateIn5 = function () {
         $($('.row-line')[4]).removeClass('hidden');
     }
