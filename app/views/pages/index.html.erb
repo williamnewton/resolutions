@@ -1,17 +1,10 @@
 <body>
 	<% unless current_user %>
-		<div class="tutorial tutorial-mask">
-			<div class="tutorial">
-				<h2>How to use Resolutions:</h2>
-				<li>Fill out your daily, weekly, bi-weekly, and monthly goals</li>
-				<li>Add or remove lines with the <strong>+</strong> and <strong>x</strong></li>
-				<li>When you're done, hit print, or save this page as a PDF</li>
-				<li>We'll check in at the end of the month to see how you've done!</li>
-				
-				<p>Have a happy, healthy, and productive month!</p>
-				<a href='/auth/twitter' class="btn btn-primary">Twitter</a>
+		<div class="tutorial">
+			<div class="tutorial-content">
 
-				<button class="ok">Okay, thanks!</button>
+				<h1>The best way to keep track of your larger goals.</h1>
+				<a href='/auth/twitter' class="login-btn">Login with Twitter</a>
 			</div>
 		</div>
 	<% else %>
