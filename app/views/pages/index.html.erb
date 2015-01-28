@@ -1,0 +1,122 @@
+<body>
+	<% unless current_user %>
+		<div class="tutorial tutorial-mask">
+			<div class="tutorial">
+				<h2>How to use Resolutions:</h2>
+				<li>Fill out your daily, weekly, bi-weekly, and monthly goals</li>
+				<li>Add or remove lines with the <strong>+</strong> and <strong>x</strong></li>
+				<li>When you're done, hit print, or save this page as a PDF</li>
+				<li>We'll check in at the end of the month to see how you've done!</li>
+				
+				<p>Have a happy, healthy, and productive month!</p>
+				<a href='/auth/twitter' class="btn btn-primary">Twitter</a>
+
+				<button class="ok">Okay, thanks!</button>
+			</div>
+		</div>
+	<% else %>
+		<a href="/logout">logout</a>
+	<% end %>
+
+	<div class="content-wrapper">
+		<div class="pull-left">
+			<h1>2<span class="cap-squeeze">015</span></h1>
+			<h3><strong>On the first of every month:</strong><br />
+			reflect on the past month, and adjust goals if necessary</h3>
+			<h4>
+		</div>
+
+		
+		<button class="save-btn pull-right">SAVE</button>
+
+		<div class="row-line">
+			<div class="indent-left" id="daily">
+				<span class="add-button daily">+</span>
+				<h2>Every Day:</h2>
+				<% if Item.daily(current_user).empty? %>
+					<div class='new-row'>
+						<input placeholder="Type goal"></input>
+						<span class="remove">X</span>
+					</div>
+				<% else %>
+					<% Item.daily(current_user).each do |item| %>
+						<div class='new-row'>
+							<input value="<%= item.text %>" placeholder="Type goal"/>
+							<span class="remove">X</span>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="row-line">
+			<div class="indent-left" id="weekly">
+				<span class="add-button weekly">+</span>
+				<h2>Every Week:</h2>
+				<% if Item.weekly(current_user).empty? %>
+					<div class='new-row'>
+						<input placeholder="Type goal"></input>
+						<span class="remove">X</span>
+					</div>
+				<% else %>
+					<% Item.weekly(current_user).each do |item| %>
+						<div class='new-row'>
+							<input value="<%= item.text %>" placeholder="Type goal"/>
+							<span class="remove">X</span>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="row-line">
+			<div class="indent-left" id="bi-weekly">
+				<span class="add-button bi-weekly">+</span>
+				<h2>Every Other Week:</h2>
+				<% if Item.bi_weekly(current_user).empty? %>
+					<div class='new-row'>
+						<input placeholder="Type goal"></input>
+						<span class="remove">X</span>
+					</div>
+				<% else %>
+					<% Item.bi_weekly(current_user).each do |item| %>
+						<div class='new-row'>
+							<input value="<%= item.text %>" placeholder="Type goal"/>
+							<span class="remove">X</span>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="row-line">
+			<div class="indent-left" id="monthly">
+				<span class="add-button monthly">+</span>
+				<h2>Every Month:</h2>
+				<% if Item.monthly(current_user).empty? %>
+					<div class='new-row'>
+						<input placeholder="Type goal"></input>
+						<span class="remove">X</span>
+					</div>
+				<% else %>
+					<% Item.monthly(current_user).each do |item| %>
+						<div class='new-row'>
+							<input value="<%= item.text %>" placeholder="Type goal"/>
+							<span class="remove">X</span>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41422644-1', 'williamnewton.co');
+  ga('send', 'pageview');
+
+</script>
