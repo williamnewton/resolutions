@@ -184,6 +184,14 @@ span.cap-squeeze {
 
 .row-line {
 	width:100%;
+	opacity:1;
+	transition:0.4s ease;
+	transform: translate(-0px,0px);
+}
+
+.row-line.hidden {
+	transform: translate(-100px,0px);
+	opacity:0;	
 }
 
 .indent-left {

@@ -42,6 +42,36 @@ $(document).ready(function () {
         $('.tutorial').addClass('fade-out');
     });
 
+    var animateIn1 = function () {
+        $($('.row-line')[0]).removeClass('hidden');
+    }
+
+    var animateIn2 = function () {
+        $($('.row-line')[1]).removeClass('hidden');
+    }
+
+    var animateIn3 = function () {
+        $($('.row-line')[2]).removeClass('hidden');
+    }
+
+    var animateIn4 = function () {
+        $($('.row-line')[3]).removeClass('hidden');
+    }
+
+    var animateIn5 = function () {
+        $($('.row-line')[4]).removeClass('hidden');
+    }
+
+    var kaskade = function () {
+        //setTimeout(animateIn1, 150);
+        setTimeout(animateIn2, 450);
+        setTimeout(animateIn3, 650);
+        setTimeout(animateIn4, 850);
+        setTimeout(animateIn5, 1050);
+    };
+
+    kaskade();
+
     $('.save-btn').click(function(e) {
         e.preventDefault();
         var data = {};
