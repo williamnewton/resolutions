@@ -146,6 +146,7 @@ body {
 	top:8px;
 	right:24px;
 	height:60px;
+	z-index: 3000;
 }
 
 .pull-right {
