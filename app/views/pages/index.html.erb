@@ -11,7 +11,46 @@
 	<div class="saved-message">
 		<h1 class="saved-message-content">SAVED!</h1>
 	</div>
-	<div class="content-wrapper">
+	<div class="header modal-open">
+		<div class="content-wrapper">
+			<div class="pull-left">
+				<h1>Resolutions</h1>
+			</div>
+			<div class="user pull-right">
+				<!-- Todo add real user image -->
+				<img class="user-img" src="https://pbs.twimg.com/profile_images/378800000297360664/96d9e7224ec40be585466172a3785249_400x400.png" />
+				<!-- Todo add real user name -->
+				<p>your name here</p>
+				<ul class="menu">
+					<li>
+						<a class="logout-btn" href="/logout">LOG OUT</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="about-mask open">
+		<div class="about-modal">
+			<h2>Design yourself with Resolutions</h2>
+			<p>Instead of "resolutions" try Daily, Weekly, Bi-Weekly, and Monthly Goals &amp; put them where you’ll see them. Set this page as your home</p>
+			<p> At the end of the month, reflect deeply and honestly. Then re-assess your list and do it again.</p>
+			<p>By organizing your resolutions into digestible bits, you increase your chances of making them happen substantially.</p>
+			<div class="credit">
+				<p>
+					Created by :
+				</p>
+				<a title="Will Newton" class="float-left" href="https://twitter.com/willdjthrill">
+					<img src="https://avatars3.githubusercontent.com/u/1836320?v=3&s=460" alt="Will Newton" />
+				</a>
+				<p class="amp">&amp;</p>
+				<a title="Hugo Melo" class="float-right" href="https://twitter.com/hugomelo">
+					<img src="https://avatars0.githubusercontent.com/u/973173?v=3&s=460" alt="Hugo Melo" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="content-wrapper modal-open">
+		<!--
 		<div class="user">
 			<img class="user-img" src="https://pbs.twimg.com/profile_images/378800000297360664/96d9e7224ec40be585466172a3785249_400x400.png" />
 			<p class="pull-right">your name here</p>
@@ -21,14 +60,26 @@
 				</li>
 			</ul>
 		</div>
+		
 		<button class="save-btn">SAVE</button>
+		
 		<div class="row-line  pull-left">
 			<h1>2<span class="cap-squeeze">015</span></h1>
 			<h3><strong>On the first of every month:</strong><br />
 			reflect on the past month, and adjust goals if necessary</h3>
 			<h4>
 		</div>
+		-->
 
+		<div class="row-line  pull-left instructions">
+			<h3><strong>On the first of every month:</strong><br />
+			reflect on the past month, and adjust goals if necessary</h3>
+		</div>			
+		<div class="buttons">	
+			<button class="save-btn">SAVE</button>
+			<button class="about-btn visible-xs">ABOUT</button>
+		</div>
+		<button class="about-btn hidden-xs">ABOUT</button>
 		<div class="row-line hidden">
 			<div class="indent-left" id="daily">
 				<span class="add-button daily">+</span>

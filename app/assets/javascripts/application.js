@@ -18,6 +18,7 @@
 
 
 $(document).ready(function () {
+    // Adds new input when + button pressed
     $(document).on('click', ".daily", function () {
         $('#daily').append('<div class="new-row"><input placeholder="Type goal"></input> <span class="remove">X</span></div>');
     });
@@ -34,14 +35,32 @@ $(document).ready(function () {
         $('#monthly').append('<div class="new-row"><input placeholder="Type goal"></input> <span class="remove">X</span></div>');
     });
 
+    // Deletes input for lists
     $(document).on('click', ".remove", function () {
         $(this).parent('div').remove();
     });
 
+    // Adds and removes display of Save button
     $(document).on('click', ".ok", function () {
         $('.tutorial').addClass('fade-out');
     });
 
+    $(document).on('click', ".indent-left", function () {
+        $('.save-btn').removeClass('faded-out');
+    });
+
+    // Adds and removes display of About modal
+    $(document).on('click', ".about-btn", function () {
+        $('.about-mask').addClass('open');
+        $('.content-wrapper, .header').addClass('modal-open');
+    });
+
+    $(document).on('click', ".about-mask", function () {
+        $('.about-mask').removeClass('open');
+        $('.content-wrapper, .header').removeClass('modal-open');
+    });
+
+    // Flowing Intro Animation
     var animateIn1 = function () {
         $($('.row-line')[0]).removeClass('hidden');
     }
@@ -97,8 +116,10 @@ $(document).ready(function () {
             });
         };
 
+        $('.save-btn').addClass('faded-out');
         savedAnimation();
-        
+
+
         console.log(data);
 
         var request = $.post(url, data);
@@ -108,6 +129,7 @@ $(document).ready(function () {
         request.done(function() {
             console.log('saved');
         });
+
     });
 });
 
