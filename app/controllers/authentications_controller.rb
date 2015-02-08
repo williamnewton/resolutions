@@ -9,15 +9,25 @@ class AuthenticationsController < ApplicationController
 		omniauth = request.env['omniauth.auth']
 		provider = omniauth['provider']
 		uid = omniauth['uid']
+		info = omniauth['info']
 
 		authentication = Authentication.find_by_provider_and_uid(provider, uid)
 		if authentication
-			session[:user_id] = authentication.user.id
+			user = authentication.user
+
+			user.name = info.name
+			user.image = info.image
+			user.save
+
+			session[:user_id] = user.id
 			redirect_to root_path
 		else
 			user = User.new
 			user.authentications.build(provider: provider, uid: uid)
 
+			user.name = info.name
+			user.image = info.image
+			
 			if user.save
 				session[:user_id] = user.id
 				redirect_to root_path

@@ -18,9 +18,9 @@
 			</div>
 			<div class="user pull-right">
 				<!-- Todo add real user image -->
-				<img class="user-img" src="https://pbs.twimg.com/profile_images/378800000297360664/96d9e7224ec40be585466172a3785249_400x400.png" />
+				<img class="user-img" src="<%= current_user.image %>" />
 				<!-- Todo add real user name -->
-				<p>your name here</p>
+				<p><%= current_user.name %></p>
 				<ul class="menu">
 					<li>
 						<a class="logout-btn" href="/logout">LOG OUT</a>
