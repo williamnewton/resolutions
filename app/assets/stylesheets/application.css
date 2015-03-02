@@ -587,7 +587,7 @@ h1.saved-message-content {
 	box-shadow:0px 2px 12px #999;
 	z-index:100000;
 	position:absolute;
-	top:100px;
+	top:50px;
 	left:50%;
 	margin-left:-236px;
 	background:#fff;
@@ -606,7 +606,7 @@ h1.saved-message-content {
 }
 
 .about-modal p {
-
+	font-size:12px;
 }
 
 .credit {
